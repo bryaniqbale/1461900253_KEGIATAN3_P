@@ -13,7 +13,7 @@ class Mall extends Model
 
     protected $fillable = [
         'id',
-        'nama',
-        'harga',
+        'id_pelanggan',
+        'id_barang',
     ];
 }

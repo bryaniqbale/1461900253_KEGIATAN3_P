@@ -41,9 +41,9 @@ class UserController extends Controller
     public function store(Request $request)
     {
         Mall::create ([
-            'id' => $request ->id,
-            'id_pelanggan' => $request ->id_pelanggan,
-            'id_barang' => $request ->id_barang,
+            'id' => $request->id,
+            'id_pelanggan' => $request->id_pelanggan,
+            'id_barang' => $request->id_barang,
         ]);
 
         return redirect('user');
@@ -82,8 +82,9 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = Mall::find($id);
-        $user->nama = $request->nama;
-        $user->harga = $request->harga;
+        $user->id = $request->id;
+        $user->id_pelanggan = $request->id_pelanggan;
+        $user->id_barang = $request->id_barang;
         $user->save();
 
         return redirect('user');

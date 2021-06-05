@@ -2,7 +2,8 @@
     @csrf
     
     <input type="hidden" name="_method" value="patch">
-    Nama : <input type="text" name="nama_mhs" value="{{ $user->nama }}">
-    Harga : <input type="text" name = 'nbi' value="{{ $user->harga }}">
+    id : <input type="text" name="nama_mhs" value="{{ $user->id }}">
+    id_pelanggan : <input type="text" name = 'nbi' value="{{ $user->id_pelanggan }}">
+    id_barang : <input type="text" name = 'nbi' value="{{ $user->id_barang }}">
     <button type="submit">Simpan</button>
     </form>
